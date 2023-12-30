@@ -1,0 +1,45 @@
+@media screen and (min-width: 412px) and (max-width: 900px) {
+    .navedit {
+      background-image: linear-gradient(to right top, #069caa, #00999d, #00958f, #009180, #108c70);
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 180px;
+      display: flex; /* Add flex display */
+      align-items: center;
+      justify-content: center; /* Center content horizontally */
+      color: white;
+      font-weight: 500;
+      font-size: 30px;
+      width: cover;
+      
+    }
+ }
+ @media screen and (min-width: 412px) and (max-width: 900px){
+    .topbar{
+       width:cover;
+    }
+ }
+ @media screen and (min-width: 412px) and (max-width: 900px) {
+    .topedit {
+     
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      
+    }
+ }
+ @media screen and (min-width: 412px) and (max-width: 900px){
+    .design{
+       width:cover;
+    }}
+    @media screen and (min-width: 412px) and (max-width: 900px){
+        .contentedit{
+           width:cover;
+           align-items: center;
+      justify-content: center;
+      text-align: center;
+        }}
+        @media screen and (min-width: 412px) and (max-width: 900px){
+            .tabledit{
+               width:300px;
+            }}

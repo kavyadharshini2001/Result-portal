@@ -1,5 +1,7 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import './Media-query.css';
+
 
 function Fetch() {
     const [results,setResults]=useState([]);
@@ -17,16 +19,15 @@ function Fetch() {
   //   fetchResults()
   // },[])
   return (
-    <>
-   <div className='container  text-capitalize fs-5 fw-semibold'><label htmlFor="studentId">Enter Student ID:</label>
-      <input
-        type="text"
-        id="studentId"
-        value={studentId}
-       onChange={handleInputChange}
-      /><button className='btn btn-outline-success m-5'onClick={fetchResults}>submit</button></div> 
-      
-
+    <><div className='contentedit'> <div className='container text-capitalize fs-5 fw-semibold '><label htmlFor="studentId">Enter Student ID:</label>
+    <input
+      type="text"
+      id="studentId"
+      value={studentId}
+     onChange={handleInputChange}
+    /><button className='btn btn-outline-success m-5'onClick={fetchResults}>submit</button></div> </div>
+  
+      <div className='tebledit'>
       <table className=' container table mt-5'>
         <thead>
           <tr className='table-warning  '>
@@ -54,6 +55,8 @@ function Fetch() {
           ))}
         </tbody>
       </table>
+      </div>
+
     
     </>
   )

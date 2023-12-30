@@ -1,38 +1,67 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import "./Navbar.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Navbar.css';
+import './Media-query.css';
 
 function Navbar() {
   return (
     <>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary design ">
-    <div class="container-fluid"><Link to={'/'}> <a class="navbar-brand" href="#"><i className="fa fa-university fa-2x" aria-hidden="true"></i></a></Link>
-     
-      
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <Link to={'/'} style={{ textDecoration: 'none' }}>
-          <li class="nav-item">
-            <a class="nav-link active fs-5 fw-semibold" aria-current="page" href="#">Login</a>
-          </li>
+      <nav className="navbar  design topbar">
+        <div className="container-fluid">
+          <Link to={'/'}>
+            <a className="navbar-brand" href="#">
+              <i className="fa fa-university fa-2x" aria-hidden="true"></i>
+            </a>
           </Link>
-          
-          <Link to={'/fetch/:id'} style={{ textDecoration: 'none' }}>
-          <li class="nav-item">
-            <a class="nav-link active fs-5 fw-semibold" aria-current="page" href="#">Fetch</a>
-          </li>
-          </Link>
-          
-        </ul>
+
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link to={'/'} style={{ textDecoration: 'none' }}>
+                  <a className="nav-link fs-5 fw-semibold" aria-current="page" href="#">
+                    Login
+                  </a>
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link to={'/fetch/:id'} style={{ textDecoration: 'none' }}>
+                  <a className="nav-link fs-5 fw-semibold" aria-current="page" href="#">
+                    Fetch
+                  </a>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div className="container w-75 m-auto topedit">
+        <div className="text-center fw-semibold ">
+          Anna University, Chennai
+          <br />
+          Office of the Controller of Examinations
+        </div>
       </div>
-    </div>
-  </nav>
-  <div className="container w-75 m-auto">
-  <div className='text-center fw-semibold topedit'>Anna University, Chennai<br/>Office of the Controller of Examinations</div>
-</div>
-<div className='container w-80 p-5'><div className='d-flex justify-content-center navedit'>Welcome to the Office of the Controller of Examinations</div></div>
-</>
-  )
+      <div className="container w-80 p-5">
+        <div className="d-flex justify-content-center   navedit ">
+          Welcome to the Office of the Controller of Examinations
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default Navbar
+export default Navbar;
