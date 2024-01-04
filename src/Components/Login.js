@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+ import'./Navbar.css'
 
 function Login() {
   const navigate = useNavigate();
@@ -7,7 +8,7 @@ function Login() {
   
   return (
     
-    <div className=' col-sm-12 col-md-6 col-lg-4 w-50 m-auto  loginedit'> <form>
+    <div className='w-50 m-auto  loginedit'> <form>
   <div class="mb-3">
     <label class="form-label fs-5 fw-semibold">Email address</label>
     <input type="email" class="form-control"  aria-describedby="emailHelp"/>

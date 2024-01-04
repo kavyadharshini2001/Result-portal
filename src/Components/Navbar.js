@@ -6,7 +6,7 @@ import './Media-query.css';
 function Navbar() {
   return (
     <>
-      <nav className="navbar  design topbar">
+      <nav className="navbar col-sm-4 col-md-12 col-lg-12  design topbar">
         <div className="container-fluid">
           <Link to={'/'}>
             <a className="navbar-brand" href="#">

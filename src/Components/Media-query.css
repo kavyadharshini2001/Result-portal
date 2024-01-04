@@ -1,45 +1,75 @@
 @media screen and (min-width: 412px) and (max-width: 900px) {
     .navedit {
-      background-image: linear-gradient(to right top, #069caa, #00999d, #00958f, #009180, #108c70);
-      background-size: cover;
-      background-repeat: no-repeat;
-      height: 180px;
-      display: flex; /* Add flex display */
-      align-items: center;
-      justify-content: center; /* Center content horizontally */
-      color: white;
-      font-weight: 500;
-      font-size: 30px;
-      width: cover;
-      
+        background-image: linear-gradient(to right top, #069caa, #00999d, #00958f, #009180, #108c70);
+        height: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 500;
+        font-size: 30px;
     }
- }
- @media screen and (min-width: 412px) and (max-width: 900px){
-    .topbar{
-       width:cover;
+
+    .topbar {
+        width: 100%;
     }
- }
- @media screen and (min-width: 412px) and (max-width: 900px) {
+
     .topedit {
-     
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
- }
- @media screen and (min-width: 412px) and (max-width: 900px){
-    .design{
-       width:cover;
-    }}
-    @media screen and (min-width: 412px) and (max-width: 900px){
-        .contentedit{
-           width:cover;
-           align-items: center;
-      justify-content: center;
-      text-align: center;
-        }}
-        @media screen and (min-width: 412px) and (max-width: 900px){
-            .tabledit{
-               width:300px;
-            }}
+
+    .design {
+        width: 100%;
+    }
+
+    .contentedit {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .tebledit {
+        font-size: 16px;
+        padding: 10px;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .contentedit {
+        background-color: lightblue;
+        padding: 10px;
+    }
+}
+@media screen and (min-width: 412px) and (max-width: 900px){
+    .fetchedit{
+        text-align: center;
+        align-items: center;
+        justify-content: center
+    };
+}
+/* Media-query.css */
+
+/* Your existing styles */
+
+/* Media query for the specified width range */
+@media only screen and (min-width: 390px) and (max-width: 900px) {
+    .container {
+      width: 80%; /* Adjust the width as needed within the specified range */
+    }
+  
+    .tabledit {
+      overflow-x: auto; /* Enable horizontal scrolling for small screens */
+    }
+  
+    .table {
+      width: 100%; /* Make the table take full width */
+    }
+  
+    .fetchedit {
+      text-align: center; /* Center-align the input and button for better responsiveness */
+    }
+  }
+  

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import './Media-query.css';
 
 
+
 function Fetch() {
     const [results,setResults]=useState([]);
     const [studentId,setStudentId] = useState('');
@@ -18,16 +19,20 @@ function Fetch() {
   // useEffect(()=>{
   //   fetchResults()
   // },[])
+  const calculateTotal = (result) => {
+    const subjects = ['maths', 'physics', 'chemistry', 'enggraphics'];
+    return subjects.reduce((acc, subject) => acc + (parseInt(result[subject]) || 0), 0);
+  };
   return (
-    <><div className='contentedit'> <div className='container text-capitalize fs-5 fw-semibold '><label htmlFor="studentId">Enter Student ID:</label>
+    <> <div className='container w-50 fetchedit text-capitalize fs-5 fw-semibold '><label htmlFor="studentId">Enter Student ID:</label>
     <input
       type="text"
       id="studentId"
       value={studentId}
      onChange={handleInputChange}
-    /><button className='btn btn-outline-success m-5'onClick={fetchResults}>submit</button></div> </div>
+    /><button className='btn btn-outline-success m-5'onClick={fetchResults}>submit</button></div> 
   
-      <div className='tebledit'>
+      <div className='tabledit'>
       <table className=' container table mt-5'>
         <thead>
           <tr className='table-warning  '>
@@ -50,7 +55,7 @@ function Fetch() {
               <td>{result.physics}</td>
               <td>{result.chemistry}</td>
               <td>{result.enggraphics}</td>
-              <td>{result.total}</td>
+              <td>{calculateTotal(result)}</td>
             </tr>
           ))}
         </tbody>
